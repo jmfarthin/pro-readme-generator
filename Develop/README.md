@@ -1,10 +1,10 @@
-MIT 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  # gumby
+  # undefined
 
   ## Description
 
-  gumby lives
+  undefined
 
   ## Table of Contents
   
@@ -17,24 +17,24 @@ MIT
   
   ## Installation
   
-  bend him
+  undefined
   
   ## Usage
   
-  bend him good
+  undefined
   
   ## Contributing
   
-  bend him real good
+  undefined
   
   ## Tests
 
-  if he doesn't break
+  undefined
 
   ## Questions
 
-  gumbyCon
-  gumby@email.com
+  undefined
+  undefined
 
-  
-  MIT 
+  ## License
+  This project is covered under the MIT license.
