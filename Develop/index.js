@@ -63,17 +63,21 @@ const prompt = inquirer.createPromptModule();
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, secondary.generateMarkdown(data), (err) =>
+        err ? console.log(err) : console.log('Success! Your README has been successfully created!')
+    )
+};
 
 // TODO: Create a function to initialize app
 function init() {
     console.log(secondary.renderLicenseBadge('testing'), secondary.pie);
-    prompt(questions).then((answers) => {
-        console.log(answers.title);
-        const filename = `${answers.title.toLowerCase().split(' ').join('')}.md`;
-
+    prompt(questions).then((data) => {
+        console.log(data.title);
+        const filename = 'README.md';
+        writeToFile(filename, data);
     });
-    
+
 }
 
 // Function call to initialize app

@@ -14,10 +14,10 @@ function renderLicenseSection(license) { }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `${licenseBadge}
+  return `${data.license}
 
   # ${data.title}
-  
+
   ## Description
 
   ${data.description}
@@ -49,10 +49,11 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  ${data.questions}
+  ${data.github}
+  ${data.email}
 
   
-  ${licenseSection}
+  ${data.license}
 `;
 }
 
@@ -61,5 +62,7 @@ const pie = "cherry pie"
 module.exports = {
   generateMarkdown,
   renderLicenseBadge,
+  renderLicenseLink,
+  renderLicenseSection,
   pie
 }
