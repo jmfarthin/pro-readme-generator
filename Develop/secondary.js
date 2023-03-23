@@ -7,10 +7,13 @@ const createBadge = (license) => {
     return '';
   } else if (license === 'MIT') {
     return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+  } else if (license === 'PDDL (Public Domain Dedication and License)') {
+    return '[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)'
+  } else if (license === 'Apache License 2') {
+    return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
   } else {
-    return 'You picked something other than MIT'
+    return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
   }
-
 };
 
 // TODO: Create a function that returns the license link
@@ -21,7 +24,7 @@ function renderLicenseLink(license) { }
 // If there is no license, return an empty string
 const createLicenseSection = (license) => {
   if (!license) {
-    return ''
+    return 'This project is not covered under any license.'
   } else {
     return `This project is covered under the ${license} license.`
   };
@@ -52,6 +55,8 @@ function generateMarkdown(data) {
   
   ## Installation
   
+  Instructions for installation:
+
   ${data.installation}
   
   ## Usage
@@ -68,10 +73,13 @@ function generateMarkdown(data) {
 
   ## Questions
 
+  If you have questions about this project, feel free to visit my GitHub profile or reach out directly via email:
+
   ${data.github}
   ${data.email}
 
   ## License
+
   ${licenseSection}
 `;
 }
