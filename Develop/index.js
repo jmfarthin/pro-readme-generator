@@ -48,10 +48,10 @@ const questions = [
         message: 'What is your preferred email?',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Which license would you like to use?',
-        choices: ['MIT', 'PDDL (Public Domain Dedication and License)', 'Apache License 2', 'Mozilla Public License 2.0']
+        choices: ['MIT', 'PDDL (Public Domain Dedication and License)', 'Apache License 2', 'Mozilla Public License 2.0', "None"]
     },
 
 ];

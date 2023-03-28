@@ -3,18 +3,32 @@
 
 // 'PD (Public Domain Mark)', 'Apache License 2', 'Mozilla Public License 2.0'
 const createBadge = (license) => {
-  if (!license) {
-    return '';
-  } else if (license === 'MIT') {
-    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-  } else if (license === 'PDDL (Public Domain Dedication and License)') {
-    return '[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)'
-  } else if (license === 'Apache License 2') {
-    return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-  } else {
-    return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+  switch (license) {
+    case "MIT":
+      return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+    case "PDDL (Public Domain Dedication and License)":
+      return '[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)'
+    case "Apache License 2":
+      return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+    case "Mozilla Public License 2.0":
+      return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+    default:
+      return ""
   }
-};
+}
+// if (!license) {
+//   return '';
+// }
+// if (license === 'MIT') {
+// }
+// if (license === 'PDDL (Public Domain Dedication and License)') {
+//   return '[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)'
+// }
+// if (license === 'Apache License 2') {
+//   return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+// }
+// return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -38,50 +52,50 @@ function generateMarkdown(data) {
   const licenseSection = createLicenseSection(license)
   return `${badge}
 
-  # ${data.title}
+# ${data.title}
 
-  ## Description
+## Description
 
-  ${data.description}
+${data.description}
 
-  ## Table of Contents
-  
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
-  
-  ## Installation
-  
-  Instructions for installation:
+## Table of Contents
 
-  ${data.installation}
-  
-  ## Usage
-  
-  ${data.usage}
-  
-  ## Contributing
-  
-  ${data.contributing}
-  
-  ## Tests
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-  ${data.tests}
+## Installation
 
-  ## Questions
+Instructions for installation:
 
-  If you have questions about this project, feel free to visit my GitHub profile or reach out directly via email:
+${data.installation}
 
-  ${data.github}
-  
-  ${data.email}
+## Usage
 
-  ## License
+${data.usage}
 
-  ${licenseSection}
+## Contributing
+
+${data.contributing}
+
+## Tests
+
+${data.tests}
+
+## Questions
+
+If you have questions about this project, feel free to visit my GitHub profile or reach out directly via email:
+
+GitHub Profile: [${data.github}](https://github.com/${data.github})
+
+Email: ${data.email}
+
+## License
+
+${licenseSection}
 `;
 }
 
