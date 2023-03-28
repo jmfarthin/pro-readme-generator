@@ -19,13 +19,10 @@ To use the README generator, download the source code and install inquirer using
 Repository: https://github.com/jmfarthin/pro-readme-generator.git
 
 
-### Screenshots and video of application in use:
+### Video of application in use:
 
-![Weather App 1](./assets/images/screenshots/weather-app-1.png)
-![Weather App 2](./assets/images/screenshots/weather-app-2.png)
-![Weather App 3](./assets/images/screenshots/weather-app-3.png)
-![Weather App 4](./assets/images/screenshots/weather-app-4.png)
-![Weather App 5](./assets/images/screenshots/weather-app-5.png)
+[Video Demonstration](https://drive.google.com/file/d/1NanZ7ZEB1w7jCAZGuJe6aSaZVNShlNBR/view?usp=share_link)
+
 
 # Credits
 
